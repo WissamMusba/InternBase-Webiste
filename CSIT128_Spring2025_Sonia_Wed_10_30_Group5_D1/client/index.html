@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InternBase - Find Your Perfect Internship Opportunity</title>
+    <link rel="icon" type="image/svg+xml" href="images/InternBase-logo.svg">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> <!-- Global font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navigation Bar / Header Section -->
+    <header>
+    <nav class="nav-bar" id="nav-bar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/InternBase-logo.svg" alt="InternBase Logo" class="logo">
+                <span class="brand-name">InternBase</span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div> <!-- Background overlay for text readability -->
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Find Your Perfect<br>
+                    <span class="gradient-text">Internship Opportunity</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Connect with top companies, explore exciting career paths, and kickstart your professional journey with our comprehensive internship platform.
+                </p>
+                <div class="hero-stats" role="region" aria-label="Platform statistics">
+                    <div class="stat-item">
+                        <span class="stat-number" id="companies-count">150+</span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="internships-count">500+</span>
+                        <span class="stat-label">Active Internships</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="placements-count">2000+</span>
+                        <span class="stat-label">Successful Placements</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-toggle-switch">
+                    <button class="hero-toggle-btn active" id="hero-student-toggle">Student</button>
+                    <button class="hero-toggle-btn" id="hero-company-toggle">Company</button>
+                </div>
+                
+                <div class="card-description">
+                    <div id="student-content">
+                        <p>Browse internships, apply, and track your applications.</p>
+                    </div>
+                    <div id="company-content" class="hidden">
+                        <p>Post internships, view applicants, and manage opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="card-buttons">
+                    <div id="hero-student-buttons" class="card-buttons">
+                        <a href="student/login.html?type=student" class="card-btn">Student Login</a>
+                        <a href="student/signup.html?type=student" class="card-btn">Student Signup</a>
+                    </div>
+                    <div id="hero-company-buttons" class="card-buttons hidden">
+                        <a href="admin/login.html?type=company" class="card-btn">Company Login</a>
+                        <a href="admin/signup.html?type=company" class="card-btn">Company Signup</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- How It Works / Steps Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">You can get started in just <span><u>four simple steps.</u></span></p>
+            </div>
+            
+            <div class="user-type-toggle">
+                <button class="toggle-btn active" data-type="student">For Students</button>
+                <button class="toggle-btn" data-type="company">For Companies</button>
+            </div>
+
+            <div class="steps-container">
+                <!-- Student's Steps -->
+                <div class="steps-content active" id="student-steps">
+                    <div class="steps-grid">
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <img src="images/icons/createuser.svg" class="custom-icon" />
+                                <span class="step-number">1</span>
+                            </div>
+                            <h3>Create Your Profile</h3>
+                            <p>Create your profile by signing up and highlighting your skills, education, and career goals in a detailed and professional format.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <img src="images/icons/browse.svg" class="custom-icon" />
+                                <span class="step-number">2</span>
+                            </div>
+                            <h3>Browse Opportunities</h3>
+                            <p>Browse a wide range of internships using powerful search and filtering tools tailored to your interests and qualifications.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <img src="images/icons/apply.svg" class="custom-icon" />
+                                <span class="step-number">3</span>
+                            </div>
+                            <h3>Apply with Ease</h3>
+                            <p>Apply effortlessly with your saved profile, and upload personalized cover letters and resumes for each opportunity.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <img src="images/icons/track.svg" class="custom-icon" />
+                                <span class="step-number">4</span>
+                            </div>
+                            <h3>Track Your Progress</h3>
+                            <p>Track your applications in real-time, receive instant updates, and stay informed about interview invitations and next steps.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Companies' Steps -->
+                <div class="steps-content" id="company-steps">
+                    <div class="steps-grid">
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <img src="images/icons/companyregistration.svg" class="custom-icon" />
+                                <span class="step-number">1</span>
+                            </div>
+                            <h3>Company Registration</h3>
+                            <p>Register your company account and build a detailed organization profile to showcase your mission, values, and opportunities.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <img src="images/icons/postings.svg" class="custom-icon" />
+                                <span class="step-number">2</span>
+                            </div>
+                            <h3>Post Internships</h3>
+                            <p>Post customized internship listings with clear requirements, benefits, and application deadlines to attract the right candidates.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <img src="images/icons/review.svg" class="custom-icon" />
+                                <span class="step-number">3</span>
+                            </div>
+                            <h3>Review Applications</h3>
+                            <p>Utilize a powerful dashboard to efficiently review, filter, and manage student applications in one place.</p>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <img src="images/icons/handshake.svg" class="custom-icon" />
+                                <span class="step-number">4</span>
+                            </div>
+                            <h3>Find Perfect Matches</h3>
+                            <p>Engage with top student talent and cultivate your future workforce through meaningful connections on our platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Partner Companies Section -->
+    <section class="partner-companies">
+        <div class="container">
+            <h3>Trusted by Leading Companies</h3>
+            <div class="partners-grid">
+                <img src="images/company-logos/partner1_facebook.svg" alt="Partner Company 1">
+                <img src="images/company-logos/partner2_apple.svg" alt="Partner Company 2">
+                <img src="images/company-logos/partner3_amazon.svg" alt="Partner Company 3">
+                <img src="images/company-logos/partner4_netflix.svg" alt="Partner Company 4">
+                <img src="images/company-logos/partner5_google.svg" alt="Partner Company 5">
+                <img src="images/company-logos/partner6_deloitte.svg" alt="Partner Company 6">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Success Stories Section -->
+    <section class="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">Hear from students and companies who found success through InternBase</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"InternBase gave me access to amazing frontend internships, and I quickly found one where I could build real-world UI projects."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/icons/user.svg" alt="Hriday K.">
+                        <div class="author-info">
+                            <h4>Hriday K.</h4>
+                            <span>Frontend Development Intern</span>
+                            <div class="company-placement">Now at Netflix</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Thanks to InternBase, I landed a cybersecurity internship that let me work on live threat monitoring and sharpen my skills fast."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/icons/user.svg" alt="Rohan R.">
+                        <div class="author-info">
+                            <h4>Rohan R.</h4>
+                            <span>Cybersecurity Analyst Intern</span>
+                            <div class="company-placement">Now at Deloitte</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a company regularly posting internships on InternBase, we've been impressed by the quality of applicants and how easy it is to manage listings and connect with motivated talent."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/icons/user.svg" alt="Mohamed B.">
+                        <div class="author-info">
+                            <h4>Mohamed B.</h4>
+                            <span>HR Manager</span>
+                            <div class="company-placement">Amazon Web Services (AWS)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About InternBase</h2>
+                    <p>InternBase is Dubai's leading internship platform, connecting ambitious students with forward-thinking companies. We believe that internships are the bridge between academic learning and professional success.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Innovation-Driven</h4>
+                                <p>Cutting-edge technology to match students with perfect opportunities</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Secure & Trusted</h4>
+                                <p>Your data is protected with enterprise-grade security measures</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Student-Focused</h4>
+                                <p>Designed with students' career development as our top priority</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>5 Years</h3>
+                        <p>Connecting students & companies</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>95%</h3>
+                        <p>Student satisfaction rate</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>150+</h3>
+                        <p>Partner companies</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>2000+</h3>
+                        <p>Successful placements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions? We're here to help you succeed in your internship journey.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Support</h4>
+                                <p>support@InternBase.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone Support</h4>
+                                <p>+971 2 345 6789</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Office Location</h4>
+                                <p>Office 128, Building 5<br>Dubai Internet City<br>Dubai, United Arab Emirates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="images/InternBase-logo.svg" alt="InternBase Logo" class="footer-logo">
+                        <h3>InternBase</h3>
+                        <p>Connecting students with their future careers through meaningful internship opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>For Students</h4>
+                    <ul>
+                        <li><a href="student/signup.html?type=student">Student Registration</a></li>
+                        <li><a href="student/login.html?type=student">Student Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>For Companies</h4>
+                    <ul>
+                        <li><a href="admin/signup.html?type=company">Company Registration</a></li>
+                        <li><a href="admin/login.html?type=company">Company Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2021-2025 InternBase. All rights reserved. | Built with passion for student success.</p>
+            </div>
+        </div>
+    </footer>
+
+
+<script src="index_script.js"></script> <!-- Main JavaScript file for interactive functionality -->
+
+</body>
+</html>

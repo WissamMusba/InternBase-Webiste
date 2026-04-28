@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Applications - InternBase</title>
+    <link rel="icon" type="image/svg+xml" href="../images/InternBase-logo.svg">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Header with navigation and branding -->
+    <header class="app-header">
+        <div class="header-brand">
+            <img src="../images/InternBase-logo.svg" alt="InternBase Logo" class="header-logo">
+            <h1 class="app-title">InternBase Company Dashboard</h1>
+        </div>
+        <nav class="app-nav">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="internships.html" class="nav-link">Internships</a>
+            <a href="applications.html" class="nav-link active">Applications</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <button id="logoutBtn" class="app-logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main content: filters and applications table -->
+    <main class="container">
+        <!-- Filters for internship and status -->
+        <div class="filters">
+            <div class="form-group">
+                <label>Filter by Internship:</label>
+                <select id="internshipFilter">
+                    <option value="all">All Internships</option>
+                    <!-- Filled by JavaScript -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Filter by Status:</label>
+                <select id="statusFilter">
+                    <option value="all">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="shortlisted">Shortlisted</option>
+                    <option value="accepted">Accepted</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Applications table -->
+        <table id="applicationsTable">
+            <thead>
+                <tr>
+                    <th>Student (Email)</th>
+                    <th>Internship (Location)</th>
+                    <th>Applied On</th>
+                    <th>Status</th>
+                    <th>Change Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="applicationsTableBody">
+                <!-- Filled by JavaScript -->
+            </tbody>
+        </table>
+    </main>
+    <!-- Handles applications page interactivity and data -->
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Internships - InternBase</title>
+    <link rel="icon" type="image/svg+xml" href="../images/InternBase-logo.svg">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Header with navigation and branding -->
+    <header class="app-header">
+        <div class="header-brand">
+            <img src="../images/InternBase-logo.svg" alt="InternBase Logo" class="header-logo">
+            <h1 class="app-title">InternBase Company Dashboard</h1>
+        </div>
+        <nav class="app-nav">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="internships.html" class="nav-link active">Internships</a>
+            <a href="applications.html" class="nav-link">Applications</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <button id="logoutBtn" class="app-logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main content: internship form and list -->
+    <main class="container">
+        <!-- Form to post new internship -->
+        <div class="form-section">
+            <h2>Post New Internship</h2>
+            <form id="internshipForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="title">Internship Title</label>
+                        <input type="text" id="title" name="title" placeholder="e.g., Software Engineering Intern" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., Dubai, UAE" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type" name="type" required>
+                            <option value="">Select Type</option>
+                            <option value="Remote">Remote</option>
+                            <option value="On-site">On-site</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stipend">Stipend (Optional)</label>
+                        <input type="text" id="stipend" name="stipend" placeholder="e.g., $1500/month or Unpaid">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="duration">Duration</label>
+                        <input type="text" id="duration" name="duration" placeholder="e.g., 3 months" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="deadline">Application Deadline</label>
+                        <input type="date" id="deadline" name="deadline" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="5" placeholder="Provide a detailed description of the internship role and responsibilities. Include any required skills here, e.g., Python, SQL, Data Analysis." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Post Internship</button>
+            </form>
+        </div>
+
+        <!-- List of posted internships -->
+        <div class="list-section">
+            <h2>My Posted Internships</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Duration</th>
+                        <th>Stipend</th>
+                        <th>Deadline</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="companyInternshipsTableBody">
+                    <!-- Internships will be loaded here dynamically by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- Handles internships page interactivity and data -->
+    <script src="js/admin.js"></script>
+</body>
+</html>

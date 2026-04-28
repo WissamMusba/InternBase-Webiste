@@ -1,0 +1,40 @@
+CSIT128_Spring2025_Sonia_Wed_10_30_Group5_D1/
+├── client/
+│   ├── index.html
+│   ├── styles.css
+│   ├── index_script.js
+│   ├── admin/
+│   │   ├── login.html
+│   │   ├── signup.html
+│   │   ├── dashboard.html
+│   │   ├── applications.html
+│   │   ├── internships.html
+│   │   ├── profile.html
+│   │   ├── css/
+│   │   │   └── admin.css
+│   │   └── js/
+│   │       └── admin.js
+│   ├── student/
+│   │   ├── login.html
+│   │   ├── signup.html
+│   │   ├── browse.html
+│   │   ├── applications.html
+│   │   ├── profile.html
+│   │   ├── css/
+│   │   │   └── student.css
+│   │   └── js/
+│   │       └── student.js
+│   └── images/
+│       └── ... (contents omitted)
+├── server/
+│   ├── app.js
+│   ├── db.js
+│   ├── init_db.js
+│   └── routes/
+│       ├── admin.js
+│       └── student.js
+├── node_modules/
+│   └── ... (contents omitted)
+├── package.json
+├── package-lock.json
+└── .env

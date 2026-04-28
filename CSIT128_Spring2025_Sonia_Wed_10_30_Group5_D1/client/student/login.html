@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - InternBase</title>
+    <link rel="icon" type="image/svg+xml" href="../images/InternBase-logo.svg">
+    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Login Page Container -->
+    <div class="auth-page-container">
+        <!-- Login Card -->
+        <div class="auth-card">
+            <!-- Header with logo and title -->
+            <div class="auth-header">
+                <img src="../images/InternBase-logo.svg" alt="InternBase Logo" class="auth-logo">
+                <h2 class="auth-title">Student Login</h2>
+            </div>
+            <!-- Login Form -->
+            <form id="studentLoginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">University Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="student@university.edu"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="auth-btn-primary">Login</button>
+
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+        <!-- Link to return to main site -->
+        <div class="back-to-main">
+            <a href="../index.html">Back to Main Site</a>
+        </div>
+    </div>
+    <!-- Handles login form functionality -->
+    <script src="js/student.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications - InternBase</title>
+    <link rel="icon" type="image/svg+xml" href="../images/InternBase-logo.svg">
+    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation and branding -->
+    <header class="app-header">
+        <div class="header-brand">
+            <img src="../images/InternBase-logo.svg" alt="InternBase Logo" class="header-logo">
+            <h1 class="app-title">InternBase Student Portal</h1>
+        </div>
+        <nav class="app-nav">
+            <a href="browse.html" class="nav-link">Browse</a>
+            <a href="applications.html" class="nav-link active">Applications</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <button id="logoutBtn" class="app-logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Applications page content -->
+    <div class="applications-container">
+        <!-- Applications header -->
+        <header class="applications-header">
+            <h1>My Applications</h1>
+        </header>
+        <!-- Status filter tabs -->
+        <div class="status-tabs">
+            <button class="tab-btn active" data-status="all">All</button>
+            <button class="tab-btn" data-status="pending">Pending</button>
+            <button class="tab-btn" data-status="shortlisted">Shortlisted</button>
+            <button class="tab-btn" data-status="accepted">Accepted</button>
+            <button class="tab-btn" data-status="rejected">Rejected</button>
+        </div>
+
+        <!-- List of applications -->
+        <div class="applications-list">
+            <div class="empty-state">
+                <p>Loading applications...</p>
+            </div>
+        </div>
+    </div>
+    <!-- Handles applications page interactivity and data -->
+    <script src="js/student.js"></script>
+</body>
+</html>

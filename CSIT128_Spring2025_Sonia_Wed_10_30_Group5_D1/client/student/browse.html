@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Internships - InternBase</title>
+    <link rel="icon" type="image/svg+xml" href="../images/InternBase-logo.svg">
+    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation and branding -->
+    <header class="app-header">
+        <div class="header-brand">
+            <img src="../images/InternBase-logo.svg" alt="InternBase Logo" class="header-logo">
+            <h1 class="app-title">InternBase Student Portal</h1>
+        </div>
+        <nav class="app-nav">
+            <a href="browse.html" class="nav-link active">Browse</a>
+            <a href="applications.html" class="nav-link">Applications</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <button id="logoutBtn" class="app-logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Browse internships page content -->
+    <div class="browse-container">
+        <!-- Browse header -->
+        <header class="browse-header">
+            <h1>Available Internships</h1>
+        </header>
+
+        <!-- Filters for search, location, and type -->
+        <div class="filters">
+            <input type="text" placeholder="Search by title, company, or skills..." id="searchInput">
+            <select id="locationFilter">
+                <option value="all">All Locations</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Singapore">Singapore</option>
+                <option value="New York">New York</option>
+                <option value="Berlin">Berlin</option>
+            </select>
+            <select id="typeFilter">
+                <option value="all">All Types</option>
+                <option value="Remote">Remote</option>
+                <option value="On-site">On-site</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
+        </div>
+
+        <!-- List of internships -->
+        <div id="internshipsList" class="internship-cards-grid">
+            <div class="empty-state">
+                <p>Loading internships...</p>
+            </div>
+        </div>
+    </div>
+    <!-- Handles browse page interactivity and data -->
+    <script src="js/student.js"></script>
+</body>
+</html>

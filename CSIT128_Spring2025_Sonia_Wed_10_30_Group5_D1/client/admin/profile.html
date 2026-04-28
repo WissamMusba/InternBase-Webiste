@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Profile - InternBase</title>
+    <link rel="icon" type="image/svg+xml" href="../images/InternBase-logo.svg">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Header with navigation and branding -->
+    <header class="app-header">
+        <div class="header-brand">
+            <img src="../images/InternBase-logo.svg" alt="InternBase Logo" class="header-logo">
+            <h1 class="app-title">InternBase Company Dashboard</h1>
+        </div>
+        <nav class="app-nav">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="internships.html" class="nav-link">Internships</a>
+            <a href="applications.html" class="nav-link">Applications</a>
+            <a href="profile.html" class="nav-link active">Profile</a>
+            <button id="logoutBtn" class="app-logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main profile content -->
+    <main class="container">
+        <!-- Profile header with logo and actions -->
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="https://placehold.co/150x150/e0e0e0/333333?text=Logo" alt="Company Logo" id="companyLogo">
+                <button class="btn-edit" id="changeLogoBtn" style="display: none;">Change Logo</button>
+            </div>
+            <div class="profile-info">
+                <h2 id="companyName">Loading Company...</h2>
+                <p class="text-muted" id="companyEmail">Loading Email...</p>
+                <div class="profile-actions">
+                    <button class="btn-edit-profile" id="editProfileBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                        </svg>
+                        Edit Profile
+                    </button>
+                    <button class="btn-change-password" id="changePasswordBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                        </svg>
+                        Change Password
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile details and edit form -->
+        <div class="profile-section">
+            <form id="profileForm" class="profile-form">
+                <div class="section-header">
+                    <h3>Company Information</h3>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" id="inputCompanyName" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <input type="text" id="inputIndustry" value="" readonly>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Contact Email</label>
+                        <input type="email" id="inputEmail" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Person/Phone</label>
+                        <input type="tel" id="inputPhone" value="" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Company Website</label>
+                    <input type="url" id="inputCompanyWebsite" value="" placeholder="e.g., https://www.yourcompany.com" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>About Company</label>
+                    <textarea id="inputAbout" rows="4" readonly></textarea>
+                </div>
+
+                <!-- Edit and save/cancel buttons, shown only in edit mode -->
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancelEditBtn" style="display: none;">Cancel</button>
+                    <button type="submit" class="btn-primary" id="saveProfileBtn" style="display: none;">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- Handles profile page interactivity and data -->
+    <script src="js/admin.js"></script>
+</body>
+</html>
